@@ -28,8 +28,6 @@ require("./src/handlers/commandHandler");
 require("./src/handlers/eventHandler");
 require("./src/handlers/mongoHandler");
 require("./src/handlers/functionHandler")(client);
-const { InviteManager } = require('fc_invite');
-InviteManager({ client: client, mongoURL: settings.mongoUrl });
 
 	client
 	.login(settings.token)
