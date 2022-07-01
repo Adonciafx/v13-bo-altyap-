@@ -73,14 +73,11 @@ module.exports = function (client) {
 	 * @returns {Promise<void>}
 	 */
 	TextChannel.prototype.error = async function (message, text) {
-		const theark = await client.users.fetch("933316540089131058");
+		const ado = await client.users.fetch("972398070492987444");
 		const embed = new MessageEmbed()
 			.setColor("RED")
-			.setAuthor(
-				message.member.displayName,
-				message.author.avatarURL({ dynamic: true, size: 2048 })
-			)
-			.setFooter("Soull ❤️", serkan.avatarURL({ dynamic: true }));
+			.setAuthor({name:message.member.displayName,iconURL:message.author.avatarURL({ dynamic: true, size: 2048 })})
+			.setFooter({text:"discord.gg/safecode", iconURL:ado.avatarURL({ dynamic: true })});
 		return this.send(embed.setDescription({ content: text })).then((x) => {
 			if (x.deletable) x.delete({ timeout: 10000 });
 		});
