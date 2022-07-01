@@ -1,10 +1,10 @@
 const { joinVoiceChannel } = require('@discordjs/voice');
 module.exports = async () => {
-var guildId = "845484929189675070"
+var guildId = ""
 let guild = client.guilds.cache.get(guildId);
 if(guild) guild.members.fetch().then(fetched=> { })
 console.log("Başaraıyla Üyeler Fetchlendi")
-const VoiceChannel = client.channels.cache.get("970042241886355556");
+const VoiceChannel = client.channels.cache.get("");
 joinVoiceChannel({
   channelId: VoiceChannel.id,
   guildId: VoiceChannel.guild.id,
